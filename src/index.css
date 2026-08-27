@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  --color-warm-ivory: #F7F3EA;
+  --color-soft-cream: #FCFAF5;
+  --color-warm-beige: #E8DFD1;
+  --color-sage-green: #AEB9A5;
+  --color-botanical-green: #243126;
+  --color-[#3E4A2A]: #3E4A2A;
+  --color-muted-olive: #7E8B72;
+  --color-[#A39A63]: #A39A63;
+  --color-[#243126]: #243126;
+  --color-soft-blush: #E8D6D1;
+  
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-warm-ivory);
+    color: var(--color-botanical-green);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7F3EA;
+}
+::-webkit-scrollbar-thumb {
+  background: #AEB9A5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7E8B72;
+}
+
+/* Floating Petal Keyframe Animations */
+@keyframes floatPetal {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  85% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate3d(60px, 105vh, 0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes floatPetalLeft {
+  0% {
+    transform: translate3d(0, -5vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate3d(-50px, 105vh, 0) rotate(-270deg);
+    opacity: 0;
+  }
+}
+
+.animate-petal-1 {
+  animation: floatPetal 18s ease-in-out infinite;
+}
+
+.animate-petal-2 {
+  animation: floatPetalLeft 22s ease-in-out infinite 3s;
+}
+
+.animate-petal-3 {
+  animation: floatPetal 15s ease-in-out infinite 6s;
+}
+
+.animate-petal-4 {
+  animation: floatPetalLeft 20s ease-in-out infinite 9s;
+}
+
+.animate-petal-5 {
+  animation: floatPetal 24s ease-in-out infinite 12s;
+}
+
+/* Blur-to-Sharp Entry Keyframes */
+@keyframes blurReveal {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+.animate-blur-reveal {
+  animation: blurReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Editorial Glass & Card Hover System */
+.editorial-card {
+  background: #FFFFFF;
+  border: 1px solid #E8DFD1;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -12px rgba(36, 49, 38, 0.08);
+  border-color: #AEB9A5;
+}
+
+.editorial-image-zoom {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-image-container:hover .editorial-image-zoom {
+  transform: scale(1.035);
+}
+
+/* Respect Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-petal-1,
+  .animate-petal-2,
+  .animate-petal-3,
+  .animate-petal-4,
+  .animate-petal-5,
+  .animate-blur-reveal {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}
