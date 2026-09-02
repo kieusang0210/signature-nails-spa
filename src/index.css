@@ -6,10 +6,9 @@
   --color-warm-beige: #E8DFD1;
   --color-sage-green: #AEB9A5;
   --color-botanical-green: #243126;
-  --color-[#3E4A2A]: #3E4A2A;
+  --color-dark-olive: #3E4A2A;
   --color-muted-olive: #7E8B72;
-  --color-[#A39A63]: #A39A63;
-  --color-[#243126]: #243126;
+  --color-accent-gold: #A39A63;
   --color-soft-blush: #E8D6D1;
   
   --font-serif: "Cormorant Garamond", Georgia, serif;
@@ -43,6 +42,61 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #7E8B72;
+}
+
+/* Promo Marquee Bar */
+.promo-bar {
+  background: linear-gradient(90deg, #243126 0%, #3E4A2A 50%, #243126 100%);
+  width: 100%;
+  height: 36px;
+  min-height: 36px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+}
+.promo-track {
+  display: flex;
+  animation: marquee 35s linear infinite;
+  width: max-content;
+}
+.promo-text {
+  color: #F7F3EA;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  padding-right: 80px;
+}
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Hero Radial Glow */
+.hero-background-glow {
+  position: absolute;
+  width: 70vw;
+  height: 70vw;
+  max-width: 800px;
+  background: radial-gradient(circle at center, rgba(174, 185, 165, 0.25) 0%, rgba(232, 223, 209, 0.12) 45%, rgba(247, 243, 234, 0) 75%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Dotted Leader Line for Price Lists */
+.service-leader {
+  flex: 1;
+  border-bottom: 1px dotted #AEB9A5;
+  margin: 0 12px;
+  align-self: baseline;
+  opacity: 0.6;
 }
 
 /* Floating Petal Keyframe Animations */
@@ -146,10 +200,12 @@
   .animate-petal-3,
   .animate-petal-4,
   .animate-petal-5,
-  .animate-blur-reveal {
+  .animate-blur-reveal,
+  .promo-track {
     animation: none !important;
     transform: none !important;
     opacity: 1 !important;
     filter: none !important;
   }
 }
+

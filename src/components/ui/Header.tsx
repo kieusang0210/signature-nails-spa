@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, MapPin, Calendar, Menu, X, Sparkles } from 'lucide-react';
+import { Calendar, Menu, X } from 'lucide-react';
 
 interface HeaderProps {
   currentTab: string;
@@ -14,38 +14,12 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onNavigate, onOpenBo
     { id: 'home', label: 'Home' },
     { id: 'nails', label: 'Nails' },
     { id: 'facial', label: 'Facial & Skincare' },
-    { id: 'results', label: 'Results' },
     { id: 'about', label: 'About' },
     { id: 'contact', label: 'Contact' },
   ];
 
   return (
-    <header className="sticky top-0 z-40 bg-[#F7F3EA]/95 backdrop-blur-md border-b border-[#EEE8D9]">
-      {/* Top Banner / Announcement */}
-      <div className="bg-[#3E4A2A] text-[#F7F3EA] text-xs py-2 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-          <div className="flex items-center gap-2 font-medium">
-            <Sparkles className="w-3.5 h-3.5 text-[#A39A63]" />
-            <span>Nails to Glow: Ask about our complimentary skin consultations during your next visit!</span>
-          </div>
-          <div className="flex items-center gap-6 text-xs text-[#EEE8D9]/90">
-            <a href="tel:616-785-0944" className="flex items-center gap-1.5 hover:text-white transition-colors">
-              <Phone className="w-3 h-3 text-[#A39A63]" />
-              <span>616-785-0944</span>
-            </a>
-            <a 
-              href="https://maps.app.goo.gl/SmMmnthwKZtKcLKE7" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hidden md:flex items-center gap-1.5 hover:text-white transition-colors"
-            >
-              <MapPin className="w-3 h-3 text-[#A39A63]" />
-              <span>3782 Alpine Ave NW, Comstock Park, MI</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
+    <header className="sticky top-0 z-50 bg-[#F7F3EA]/90 backdrop-blur-md border-b border-[#E8DFD1] transition-all">
       {/* Main Navigation Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
@@ -54,14 +28,14 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onNavigate, onOpenBo
             className="flex items-center gap-3 cursor-pointer group"
             onClick={() => onNavigate('home')}
           >
-            <div className="w-10 h-10 rounded-full bg-[#3E4A2A] flex items-center justify-center text-[#F7F3EA] font-serif text-xl font-bold shadow-sm group-hover:bg-[#61725A] transition-colors">
+            <div className="w-10 h-10 rounded-full bg-[#243126] flex items-center justify-center text-[#F7F3EA] font-serif text-xl font-bold shadow-md group-hover:bg-[#3E4A2A] transition-colors">
               S
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-xl sm:text-2xl font-semibold tracking-wide text-[#243126]">
+              <span className="font-serif text-xl sm:text-2xl font-bold tracking-wide text-[#243126]">
                 Signature
               </span>
-              <span className="text-[10px] tracking-[0.2em] uppercase font-sans text-[#61725A] font-medium">
+              <span className="text-[10px] tracking-[0.25em] uppercase font-sans text-[#7E8B72] font-semibold">
                 Nails &amp; Skincare
               </span>
             </div>
@@ -73,15 +47,15 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onNavigate, onOpenBo
               <button
                 key={item.id}
                 onClick={() => onNavigate(item.id)}
-                className={`text-sm font-medium tracking-wide transition-all relative py-1 ${
+                className={`text-xs font-semibold uppercase tracking-[0.15em] transition-all relative py-2 ${
                   currentTab === item.id 
-                    ? 'text-[#3E4A2A] font-semibold' 
-                    : 'text-[#243126]/80 hover:text-[#3E4A2A]'
+                    ? 'text-[#243126] font-bold' 
+                    : 'text-[#243126]/75 hover:text-[#3E4A2A]'
                 }`}
               >
                 {item.label}
                 {currentTab === item.id && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#61725A] rounded-full" />
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#7E8B72] rounded-full" />
                 )}
               </button>
             ))}
@@ -91,9 +65,9 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onNavigate, onOpenBo
           <div className="hidden lg:flex items-center gap-4">
             <button
               onClick={() => onOpenBooking()}
-              className="bg-[#3E4A2A] hover:bg-[#61725A] text-[#FFFFFF] px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider shadow-sm hover:shadow transition-all flex items-center gap-2 group"
+              className="bg-transparent text-[#243126] hover:bg-[#243126] hover:text-[#F7F3EA] border border-[#243126] px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-[0.2em] transition-all shadow-sm hover:shadow flex items-center gap-2 group"
             >
-              <Calendar className="w-4 h-4 text-[#AEB9A5] group-hover:scale-110 transition-transform" />
+              <Calendar className="w-3.5 h-3.5 text-[#7E8B72] group-hover:text-[#AEB9A5] transition-colors" />
               <span>Book Now</span>
             </button>
           </div>
@@ -102,9 +76,9 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onNavigate, onOpenBo
           <div className="lg:hidden flex items-center gap-3">
             <button
               onClick={() => onOpenBooking()}
-              className="bg-[#3E4A2A] text-white px-3.5 py-2 rounded-full text-xs font-semibold flex items-center gap-1.5"
+              className="bg-[#243126] text-white px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider flex items-center gap-1.5"
             >
-              <Calendar className="w-3.5 h-3.5" />
+              <Calendar className="w-3.5 h-3.5 text-[#AEB9A5]" />
               <span>Book</span>
             </button>
 
@@ -121,7 +95,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onNavigate, onOpenBo
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#F7F3EA] border-b border-[#EEE8D9] px-4 pt-2 pb-6 space-y-3">
+        <div className="lg:hidden bg-[#F7F3EA] border-b border-[#E8DFD1] px-4 pt-2 pb-6 space-y-3">
           {navItems.map((item) => (
             <button
               key={item.id}
@@ -129,22 +103,22 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onNavigate, onOpenBo
                 onNavigate(item.id);
                 setMobileMenuOpen(false);
               }}
-              className={`block w-full text-left py-2.5 px-3 rounded-lg text-base font-medium transition-colors ${
+              className={`block w-full text-left py-2.5 px-3 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors ${
                 currentTab === item.id
-                  ? 'bg-[#EEE8D9] text-[#3E4A2A] font-semibold'
-                  : 'text-[#243126] hover:bg-[#EEE8D9]/50'
+                  ? 'bg-[#E8DFD1] text-[#243126] font-bold'
+                  : 'text-[#243126] hover:bg-[#E8DFD1]/50'
               }`}
             >
               {item.label}
             </button>
           ))}
-          <div className="pt-2 border-t border-[#EEE8D9]">
+          <div className="pt-2 border-t border-[#E8DFD1]">
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 onOpenBooking();
               }}
-              className="w-full bg-[#3E4A2A] text-white py-3 rounded-full text-sm font-semibold uppercase tracking-wider flex items-center justify-center gap-2"
+              className="w-full bg-[#243126] text-white py-3 rounded-full text-xs font-semibold uppercase tracking-widest flex items-center justify-center gap-2"
             >
               <Calendar className="w-4 h-4 text-[#AEB9A5]" />
               <span>Select Service &amp; Book</span>
@@ -155,3 +129,4 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onNavigate, onOpenBo
     </header>
   );
 };
+

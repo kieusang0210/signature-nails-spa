@@ -1,0 +1,15 @@
+{"kind":"workbook","id":"wb/wytnmo","sheets":9}
+{"kind":"sheet","id":"ws/xw60aw","name":"01_Tom tat","index":0,"range":"A1:F27","address":"A1:F27"}
+{"kind":"sheet","id":"ws/z05qia","name":"02_GMB Facial","index":1,"range":"A1:H37","address":"A1:H37"}
+{"kind":"sheet","id":"ws/c6g2xy","name":"03_Web Facial","index":2,"range":"A1:D33","address":"A1:D33"}
+{"kind":"sheet","id":"ws/y0sqkc","name":"04_Social Facial","index":3,"range":"A1:E34","address":"A1:E34"}
+{"kind":"sheet","id":"ws/emucih","name":"05_Plan 90 ngay","index":4,"range":"A1:G16","address":"A1:G16"}
+{"kind":"sheet","id":"ws/f2epe9","name":"06_Content 30 ngay","index":5,"range":"A1:H26","address":"A1:H26"}
+{"kind":"sheet","id":"ws/h3v8cm","name":"07_KPI Budget","index":6,"range":"A1:H21","address":"A1:H21","formulas":5}
+{"kind":"formula","sheet":"07_KPI Budget","address":"E7","formula":"=IFERROR(D7/C7,0)"}
+{"kind":"formula","sheet":"07_KPI Budget","address":"E8","formula":"=IFERROR(D8/C8,0)"}
+{"kind":"formula","sheet":"07_KPI Budget","address":"E9","formula":"=IFERROR(D9/C9,0)"}
+{"kind":"formula","sheet":"07_KPI Budget","address":"E10","formula":"=IFERROR(D10/C10,0)"}
+{"kind":"formula","sheet":"07_KPI Budget","address":"C18","formula":"=IFERROR(C17/C15,0)"}
+{"kind":"sheet","id":"ws/u84zah","name":"08_Hoi dap nhanh","index":7,"range":"A1:C15","address":"A1:C15"}
+{"kind":"sheet","id":"ws/xi8n1l","name":"09_Nguon & gaps","index":8,"range":"A1:D23","address":"A1:D23"}

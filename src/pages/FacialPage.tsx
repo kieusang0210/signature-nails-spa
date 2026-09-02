@@ -213,6 +213,89 @@ export const FacialPage: React.FC<FacialPageProps> = ({ onOpenBooking, selectedC
           </div>
         </div>
 
+        {/* Real Skin Transformations & Results */}
+        <div className="space-y-8">
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#7E8B72]">
+              Real Client Outcomes
+            </span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#243126]">
+              Skin Transformations &amp; Results
+            </h2>
+            <p className="text-xs text-[#243126]/75">
+              Authentic facial results from our Comstock Park studio—clearer pores, restored barrier, and natural glow.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-3xl overflow-hidden border border-[#E8DFD1] shadow-md hover:shadow-lg transition-all flex flex-col justify-between">
+              <div>
+                <div className="relative h-72 overflow-hidden">
+                  <img
+                    src="/images/skincare_deepclean.png"
+                    alt="Pore Clearing & Texture Smoothing"
+                    className="w-full h-full object-cover editorial-image-zoom"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#243126]/80 via-transparent to-transparent" />
+                  <span className="absolute top-4 left-4 bg-white/90 text-[#243126] text-[10px] uppercase font-bold px-3 py-1 rounded-full">
+                    Facial Result
+                  </span>
+                </div>
+                <div className="p-6 space-y-2">
+                  <div className="flex items-center justify-between text-xs text-[#7E8B72] font-semibold">
+                    <span>Advanced Deep Clean Facial</span>
+                    <span>1 Session Result</span>
+                  </div>
+                  <h3 className="font-serif text-xl font-bold text-[#243126]">Pore Clearing &amp; Texture Smoothing</h3>
+                  <p className="text-xs text-[#243126]/80 italic">"My skin felt immediately lighter, cleaner, and super smooth without any irritation!"</p>
+                </div>
+              </div>
+              <div className="p-6 pt-0">
+                <button
+                  onClick={() => onOpenBooking('facial')}
+                  className="w-full bg-[#243126] hover:bg-[#3E4A2A] text-white py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors shadow-sm flex items-center justify-center gap-1.5"
+                >
+                  <Calendar className="w-3.5 h-3.5 text-[#AEB9A5]" />
+                  <span>Book This Facial</span>
+                </button>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-3xl overflow-hidden border border-[#E8DFD1] shadow-md hover:shadow-lg transition-all flex flex-col justify-between">
+              <div>
+                <div className="relative h-72 overflow-hidden">
+                  <img
+                    src="/images/skincare_nanoglow.png"
+                    alt="Instant Radiance & Event Hydration"
+                    className="w-full h-full object-cover editorial-image-zoom"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#243126]/80 via-transparent to-transparent" />
+                  <span className="absolute top-4 left-4 bg-white/90 text-[#243126] text-[10px] uppercase font-bold px-3 py-1 rounded-full">
+                    Glow Result
+                  </span>
+                </div>
+                <div className="p-6 space-y-2">
+                  <div className="flex items-center justify-between text-xs text-[#7E8B72] font-semibold">
+                    <span>NanoGlow Infusion Treatment</span>
+                    <span>Instant Hydration</span>
+                  </div>
+                  <h3 className="font-serif text-xl font-bold text-[#243126]">Instant Radiance &amp; Event Hydration</h3>
+                  <p className="text-xs text-[#243126]/80 italic">"The dewiness lasted for days! My foundation glided on like silk for the party."</p>
+                </div>
+              </div>
+              <div className="p-6 pt-0">
+                <button
+                  onClick={() => onOpenBooking('facial')}
+                  className="w-full bg-[#243126] hover:bg-[#3E4A2A] text-white py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-colors shadow-sm flex items-center justify-center gap-1.5"
+                >
+                  <Calendar className="w-3.5 h-3.5 text-[#AEB9A5]" />
+                  <span>Book This Facial</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* 11 & 12. Pre/Post Care & FAQ */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           <div className="lg:col-span-7 bg-white rounded-3xl p-8 border border-[#EEE8D9] shadow-sm space-y-6">
@@ -237,7 +320,7 @@ export const FacialPage: React.FC<FacialPageProps> = ({ onOpenBooking, selectedC
             <div className="pt-4">
               <button
                 onClick={() => onOpenBooking('consultation')}
-                className="w-full bg-[#3E4A2A] hover:bg-[#61725A] text-white py-3 rounded-full text-xs font-semibold uppercase tracking-wider text-center"
+                className="w-full bg-[#243126] hover:bg-[#3E4A2A] text-white py-3 rounded-full text-xs font-semibold uppercase tracking-wider text-center"
               >
                 Schedule Skin Consultation
               </button>

@@ -1,0 +1,37 @@
+{
+  "type": "process_flow",
+  "platform": "presentation",
+  "dimensions": {
+    "width": 1600,
+    "height": 900
+  },
+  "colors": {
+    "background": "#F8F6F1",
+    "text": "#314038",
+    "accent": "#B58D63",
+    "secondary": "#6C826F"
+  },
+  "headline": "FACIAL MARKETING · 90 NGÀY",
+  "flow": [
+    "Được tìm thấy",
+    "Tin tưởng",
+    "Đặt lịch"
+  ],
+  "channels": [
+    "Website + GMB dùng chung",
+    "Facebook + IG Facial riêng",
+    "TikTok pilot 6 tuần"
+  ],
+  "timeline": [
+    "0–30 Nền tảng",
+    "31–60 Ra mắt",
+    "61–90 Tối ưu"
+  ],
+  "gmb": "Relevance + Distance + Prominence",
+  "kpis": [
+    "Bookings",
+    "Clicks",
+    "Reviews",
+    "Conversion"
+  ]
+}

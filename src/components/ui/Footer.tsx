@@ -74,9 +74,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                 <button onClick={() => onNavigate('facial')} className="hover:text-white transition-colors">Facial &amp; Skincare Menu</button>
               </li>
               <li>
-                <button onClick={() => onNavigate('results')} className="hover:text-white transition-colors">Client Transformations</button>
-              </li>
-              <li>
                 <button onClick={() => onNavigate('about')} className="hover:text-white transition-colors">About Salon &amp; Esthetician</button>
               </li>
               <li>

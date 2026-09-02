@@ -9,22 +9,16 @@ import { BotanicalBranch, BotanicalDivider } from './components/ui/BotanicalDeco
 // Homepage Components
 import { HeroDual } from './components/home/HeroDual';
 import { ServicePathCards } from './components/home/ServicePathCards';
-import { SkinConcernGrid } from './components/home/SkinConcernGrid';
-import { FacialExperience } from './components/home/FacialExperience';
-import { FeaturedFacials } from './components/home/FeaturedFacials';
-import { EstheticianProfile } from './components/home/EstheticianProfile';
-import { NailShowcase } from './components/home/NailShowcase';
-import { NailsToGlowBridge } from './components/home/NailsToGlowBridge';
+import { InteractiveServiceCalculator } from './components/home/InteractiveServiceCalculator';
 import { ReviewTabs } from './components/ui/ReviewTabs';
 
 // Dedicated Sub-Pages
 import { NailsPage } from './pages/NailsPage';
 import { FacialPage } from './pages/FacialPage';
-import { ResultsPage } from './pages/ResultsPage';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 
-import { Sparkles, Calendar, HeartHandshake, Phone } from 'lucide-react';
+import { Sparkles, Calendar, HeartHandshake } from 'lucide-react';
 
 export function App() {
   const [currentTab, setCurrentTab] = useState<string>('home');
@@ -61,31 +55,16 @@ export function App() {
       <main className="flex-grow">
         {currentTab === 'home' && (
           <>
-            {/* SECTION 1 — HERO */}
+            {/* SECTION 1 — HERO DUAL BANNER */}
             <HeroDual onNavigate={handleNavigate} onOpenBooking={handleOpenBooking} />
 
-            {/* SECTION 2 — TWO SERVICE PATHS */}
+            {/* SECTION 2 — TWO SERVICE PILLARS (NAILS VS SKINCARE SHOWCASE & CTA) */}
             <ServicePathCards onNavigate={handleNavigate} onOpenBooking={handleOpenBooking} />
 
-            {/* SECTION 3 — FACIAL DISCOVERY FEATURE */}
-            <SkinConcernGrid onNavigate={handleNavigate} onOpenBooking={handleOpenBooking} />
+            {/* SECTION 3 — INTERACTIVE SERVICE MENU & PRICE CALCULATOR */}
+            <InteractiveServiceCalculator onOpenBooking={handleOpenBooking} />
 
-            {/* SECTION 4 — FEATURED FACIAL EXPERIENCE */}
-            <FacialExperience onNavigate={handleNavigate} onOpenBooking={handleOpenBooking} />
-
-            {/* SECTION 5 — FEATURED FACIALS */}
-            <FeaturedFacials onNavigate={handleNavigate} onOpenBooking={handleOpenBooking} />
-
-            {/* SECTION 7 — MEET THE ESTHETICIAN */}
-            <EstheticianProfile onOpenBooking={handleOpenBooking} />
-
-            {/* SECTION 8 — NAIL EXPERIENCE */}
-            <NailShowcase onNavigate={handleNavigate} onOpenBooking={handleOpenBooking} />
-
-            {/* SECTION 9 — NAILS TO GLOW CROSS-SELL */}
-            <NailsToGlowBridge onNavigate={handleNavigate} onOpenBooking={handleOpenBooking} />
-
-            {/* SECTION 10 — REVIEWS */}
+            {/* SECTION 4 — REVIEWS & SOCIAL PROOF */}
             <ReviewTabs />
 
             {/* SECTION 14 — EMOTIONAL FINAL CTA */}
@@ -134,14 +113,6 @@ export function App() {
                     <span>Free Consultation</span>
                   </button>
                 </div>
-
-                <div className="pt-8 border-t border-[#3E4A2A] flex flex-col sm:flex-row justify-between items-center text-xs text-[#FCFAF5]/70 gap-2">
-                  <span>3782 Alpine Ave NW, Comstock Park, MI 49321</span>
-                  <a href="tel:616-785-0944" className="hover:text-white flex items-center gap-1 font-semibold text-[#AEB9A5]">
-                    <Phone className="w-3.5 h-3.5" />
-                    <span>616-785-0944</span>
-                  </a>
-                </div>
               </div>
             </section>
           </>
@@ -149,7 +120,6 @@ export function App() {
 
         {currentTab === 'nails' && <NailsPage onOpenBooking={handleOpenBooking} />}
         {currentTab === 'facial' && <FacialPage onOpenBooking={handleOpenBooking} selectedConcernId={selectedConcernId} />}
-        {currentTab === 'results' && <ResultsPage onOpenBooking={handleOpenBooking} />}
         {currentTab === 'about' && <AboutPage onOpenBooking={handleOpenBooking} />}
         {currentTab === 'contact' && <ContactPage onOpenBooking={handleOpenBooking} />}
       </main>
