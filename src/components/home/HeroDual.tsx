@@ -27,7 +27,7 @@ export const HeroDual: React.FC<HeroDualProps> = ({ onNavigate, onOpenBooking })
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
           {/* Left Text Content */}
-          <div className="lg:col-span-6 space-y-4 lg:space-y-5 text-center lg:text-left">
+          <div className="lg:col-span-6 space-y-4 lg:space-y-5 text-center lg:text-left animate-blur-reveal">
             {/* Small Luxury Eyebrow Tagline */}
             <div className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.35em] text-[#7E8B72]">
               <Sparkles className="w-3.5 h-3.5 text-[#3E4A2A]" />
@@ -76,7 +76,7 @@ export const HeroDual: React.FC<HeroDualProps> = ({ onNavigate, onOpenBooking })
           </div>
 
           {/* Right Asymmetric Editorial Image Layout */}
-          <div className="lg:col-span-6 relative mt-4 lg:mt-0">
+          <div className="lg:col-span-6 relative mt-4 lg:mt-0 animate-blur-reveal">
             <div className="relative max-w-md mx-auto lg:max-w-none">
               
               {/* Main Large Editorial Image */}
