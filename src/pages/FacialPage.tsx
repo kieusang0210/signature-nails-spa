@@ -22,6 +22,7 @@ export const FacialPage: React.FC<FacialPageProps> = ({ onOpenBooking, selectedC
         
         {/* 1. Facial Hero */}
         <div className="bg-[#243126] text-[#F7F3EA] rounded-3xl p-8 sm:p-14 relative overflow-hidden shadow-xl">
+          <div className="absolute inset-0 bg-[url('/images/sage_silk_bg.png')] bg-cover bg-center opacity-30 mix-blend-soft-light pointer-events-none" />
           <div className="relative z-10 max-w-2xl space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#3E4A2A] text-[#A39A63] text-xs font-semibold uppercase tracking-wider">
               <Sparkles className="w-4 h-4" />
@@ -212,6 +213,45 @@ export const FacialPage: React.FC<FacialPageProps> = ({ onOpenBooking, selectedC
             })}
           </div>
         </div>
+
+        {/* Facial Add-On Treatments Card */}
+        <div className="bg-white rounded-3xl p-8 border border-[#EEE8D9] shadow-sm space-y-6">
+          <div className="border-b border-[#EEE8D9] pb-4">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#7E8B72]">Customize Your Experience</span>
+            <h2 className="font-serif text-3xl font-bold text-[#243126] mt-1">Add-On Treatments</h2>
+            <p className="text-xs text-[#243126]/75 mt-1">Enhance any facial service with specialized target therapies and extra relaxation.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-[#F7F3EA] p-5 rounded-2xl border border-[#E8DFD1] space-y-3">
+              <h3 className="font-serif text-lg font-bold text-[#243126]">Enhancement</h3>
+              <ul className="space-y-2 text-xs">
+                <li className="flex justify-between font-medium"><span>Oxygen Glow Finish</span><span className="font-bold text-[#3E4A2A]">$40</span></li>
+                <li className="flex justify-between font-medium"><span>LED Light Therapy</span><span className="font-bold text-[#3E4A2A]">$20</span></li>
+                <li className="flex justify-between font-medium"><span>Lifting Mask</span><span className="font-bold text-[#3E4A2A]">$25</span></li>
+              </ul>
+            </div>
+
+            <div className="bg-[#F7F3EA] p-5 rounded-2xl border border-[#E8DFD1] space-y-3">
+              <h3 className="font-serif text-lg font-bold text-[#243126]">Targeted Treatments</h3>
+              <ul className="space-y-2 text-xs">
+                <li className="flex justify-between font-medium"><span>Pores Detox Infusion</span><span className="font-bold text-[#3E4A2A]">$45</span></li>
+                <li className="flex justify-between font-medium"><span>Dermaplaning</span><span className="font-bold text-[#3E4A2A]">$40</span></li>
+                <li className="flex justify-between font-medium"><span>Eyes Treatment</span><span className="font-bold text-[#3E4A2A]">$35</span></li>
+                <li className="flex justify-between font-medium"><span>Deep Clean Technique</span><span className="font-bold text-[#3E4A2A]">$45</span></li>
+              </ul>
+            </div>
+
+            <div className="bg-[#F7F3EA] p-5 rounded-2xl border border-[#E8DFD1] space-y-3">
+              <h3 className="font-serif text-lg font-bold text-[#243126]">Relaxations &amp; Extras</h3>
+              <ul className="space-y-2 text-xs">
+                <li className="flex justify-between font-medium"><span>Neck &amp; Shoulder Massage</span><span className="font-bold text-[#3E4A2A]">$20</span></li>
+                <li className="flex justify-between font-medium"><span>Facial Massage</span><span className="font-bold text-[#3E4A2A]">$20</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
 
         {/* Real Skin Transformations & Results */}
         <div className="space-y-8">

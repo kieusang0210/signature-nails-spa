@@ -9,13 +9,12 @@ import { BotanicalBranch, BotanicalDivider } from './components/ui/BotanicalDeco
 // Homepage Components
 import { HeroDual } from './components/home/HeroDual';
 import { ServicePathCards } from './components/home/ServicePathCards';
-import { InteractiveServiceCalculator } from './components/home/InteractiveServiceCalculator';
+import { AboutSection } from './components/home/AboutSection';
 import { ReviewTabs } from './components/ui/ReviewTabs';
 
 // Dedicated Sub-Pages
 import { NailsPage } from './pages/NailsPage';
 import { FacialPage } from './pages/FacialPage';
-import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 
 import { Sparkles, Calendar, HeartHandshake } from 'lucide-react';
@@ -61,14 +60,15 @@ export function App() {
             {/* SECTION 2 — TWO SERVICE PILLARS (NAILS VS SKINCARE SHOWCASE & CTA) */}
             <ServicePathCards onNavigate={handleNavigate} onOpenBooking={handleOpenBooking} />
 
-            {/* SECTION 3 — INTERACTIVE SERVICE MENU & PRICE CALCULATOR */}
-            <InteractiveServiceCalculator onOpenBooking={handleOpenBooking} />
+            {/* SECTION 3 — ABOUT & ESTHETICIAN EXPERTISE */}
+            <AboutSection onOpenBooking={handleOpenBooking} />
 
             {/* SECTION 4 — REVIEWS & SOCIAL PROOF */}
             <ReviewTabs />
 
             {/* SECTION 14 — EMOTIONAL FINAL CTA */}
             <section className="py-24 bg-[#243126] text-white text-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-[url('/images/sage_silk_bg.png')] bg-cover bg-center opacity-25 mix-blend-soft-light pointer-events-none" />
               <BotanicalBranch className="absolute top-0 right-0 w-80 h-96 text-[#AEB9A5]" opacity={0.08} />
               <BotanicalBranch className="absolute bottom-0 left-0 w-80 h-96 text-[#E8DFD1] rotate-180" opacity={0.06} />
 
@@ -120,7 +120,6 @@ export function App() {
 
         {currentTab === 'nails' && <NailsPage onOpenBooking={handleOpenBooking} />}
         {currentTab === 'facial' && <FacialPage onOpenBooking={handleOpenBooking} selectedConcernId={selectedConcernId} />}
-        {currentTab === 'about' && <AboutPage onOpenBooking={handleOpenBooking} />}
         {currentTab === 'contact' && <ContactPage onOpenBooking={handleOpenBooking} />}
       </main>
 

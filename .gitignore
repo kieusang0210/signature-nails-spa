@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Temporary work directories
+artifact_build_content_plan/
+outputs/

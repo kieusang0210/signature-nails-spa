@@ -14,7 +14,6 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onNavigate, onOpenBo
     { id: 'home', label: 'Home' },
     { id: 'nails', label: 'Nails' },
     { id: 'facial', label: 'Facial & Skincare' },
-    { id: 'about', label: 'About' },
     { id: 'contact', label: 'Contact' },
   ];
 

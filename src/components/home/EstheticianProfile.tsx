@@ -17,14 +17,14 @@ export const EstheticianProfile: React.FC<EstheticianProfileProps> = ({ onOpenBo
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-lg border-4 border-[#EEE8D9] group">
                 <img
-                  src="/images/skincare_esthetician.png"
-                  alt="Lead Certified Esthetician at Signature"
-                  className="w-full h-96 sm:h-[420px] object-cover group-hover:scale-105 transition-transform duration-500"
+                  src="/images/tien_pham_esthetician.jpg"
+                  alt="Tien Pham - Licensed Esthetician Specialist"
+                  className="w-full h-96 sm:h-[420px] object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#243126]/70 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3 rounded-xl border border-[#EEE8D9] flex items-center justify-between">
                   <div>
-                    <h4 className="font-serif font-bold text-[#243126] text-base">Xena &amp; Skincare Team</h4>
+                    <h4 className="font-serif font-bold text-[#243126] text-base">Tien Pham &amp; Skincare Team</h4>
                     <p className="text-[11px] text-[#61725A] font-medium">Licensed Esthetician Specialist</p>
                   </div>
                   <Award className="w-5 h-5 text-[#A39A63]" />

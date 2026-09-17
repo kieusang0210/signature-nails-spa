@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MapPin, Clock, Heart, Sparkles } from 'lucide-react';
+import { Phone, MapPin, Clock, Sparkles } from 'lucide-react';
 import { BotanicalBranch } from './BotanicalDecor';
 
 interface FooterProps {
@@ -74,9 +74,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
                 <button onClick={() => onNavigate('facial')} className="hover:text-white transition-colors">Facial &amp; Skincare Menu</button>
               </li>
               <li>
-                <button onClick={() => onNavigate('about')} className="hover:text-white transition-colors">About Salon &amp; Esthetician</button>
-              </li>
-              <li>
                 <button onClick={() => onNavigate('contact')} className="hover:text-white transition-colors">Contact &amp; Location</button>
               </li>
             </ul>
@@ -146,10 +143,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
         {/* Footer Bottom */}
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center text-[11px] text-[#FCFAF5]/60 gap-4">
           <p>© {new Date().getFullYear()} Signature Nails &amp; Spa. All Rights Reserved.</p>
-          <div className="flex items-center gap-1 text-[#FCFAF5]/80">
-            <span>Crafted with</span>
-            <Heart className="w-3 h-3 text-[#E8D6D1] fill-current" />
-            <span>for Comstock Park &amp; Greater Grand Rapids, MI</span>
+          <div className="flex items-center gap-1.5 text-[#FCFAF5]/80">
+            <span>Designed by</span>
+            <a
+              href="https://easymarketingus.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#AEB9A5] hover:text-white font-semibold underline underline-offset-2 transition-colors"
+            >
+              Easy Marketing
+            </a>
           </div>
         </div>
 

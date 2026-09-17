@@ -19,52 +19,77 @@ interface ServiceCategory {
 const SERVICE_DATA: ServiceCategory[] = [
   {
     id: 'nails',
-    name: 'Nail Manicures',
+    name: 'Natural Nail Care',
     items: [
-      { id: 'mani-classic', name: 'Signature Classic Manicure', price: 25, description: 'Nail shaping, cuticle treatment, hand massage, and regular polish of your choice.' },
-      { id: 'mani-gel', name: 'Gel Polish Manicure', price: 40, description: 'Long-lasting high-shine gel polish with full cuticle care & relaxing hand massage.', popular: true },
-      { id: 'mani-collagen', name: 'Collagen Hand Treatment Spa', price: 38, description: 'Nail care combined with deeply hydrating collagen gloves for velvety smooth hands.' },
-      { id: 'mani-deluxe', name: 'Deluxe Signature Spa Manicure', price: 48, description: 'Sugar scrub exfoliation, hot towel wrap, paraffin wax treatment, and hand massage.' },
+      { id: 'mani-classic', name: 'Classic Manicure', price: 25, description: 'Nail shaping, cuticle trimming, hand massage, and regular polish.' },
+      { id: 'mani-shellac', name: 'Classic Manicure w/ Shellac', price: 38, description: 'Classic manicure upgraded with long-lasting gel shellac polish.', popular: true },
+      { id: 'pedi-classic', name: 'Classic Spa Pedicure', price: 35, description: 'Whirlpool foot bath, nail shaping, callus smoothing, foot scrub, and calming massage.' },
+      { id: 'pedi-deluxe', name: 'Deluxe Spa Pedicure', price: 50, description: 'Exfoliating scrub, mud mask with warm towels, and extended relaxing massage.', popular: true },
+      { id: 'pedi-hotstone', name: 'Hot Stone Spa Pedicure', price: 60, description: 'Warm stone massage, deep moisture treatment, and muscle tension relief.' },
+      { id: 'pedi-candle', name: 'Candle Therapy Spa Pedicure', price: 75, description: 'Luxury warm massage candle oil treatment for ultra-hydrated, soft skin.' },
     ]
   },
   {
-    id: 'pedicures',
-    name: 'Spa Pedicures',
+    id: 'enhancements',
+    name: 'Nail Enhancements',
     items: [
-      { id: 'pedi-classic', name: 'Signature Classic Pedicure', price: 38, description: 'Warm sea salt soak, nail trimming, callus smoothing, lotion massage, and warm towel wrap.' },
-      { id: 'pedi-sugar', name: 'Organic Sugar Scrub Pedicure', price: 48, description: 'Classic pedicure enhanced with organic sugar scrub exfoliation for silky soft legs.' },
-      { id: 'pedi-deluxe', name: 'Deluxe Detox Spa Pedicure', price: 58, description: 'Organic detox sea salt soak, purifying clay mask, hot towel wrap, and deep lotion massage.', popular: true },
-      { id: 'pedi-vip', name: 'VIP Collagen & Hot Stone Pedicure', price: 75, description: 'Collagen-infused bath, soothing hot stone massage, paraffin wax, and shoulder massage.' },
-    ]
-  },
-  {
-    id: 'dip-gelx',
-    name: 'Dip & Gel-X',
-    items: [
-      { id: 'dip-standard', name: 'Organic Dipping Powder', price: 48, description: 'Lightweight, durable, odor-free enhancement enriched with vitamins to strengthen natural nails.', popular: true },
-      { id: 'dip-french', name: 'Dipping Powder French', price: 55, description: 'Classic French tip finish or custom dual-color gradient with long-lasting chip resistance.' },
-      { id: 'gelx-full', name: 'Après Gel-X Full Set', price: 65, description: 'Full coverage soft gel extensions with zero natural nail damage and lightweight elegance.' },
-      { id: 'gelx-refill', name: 'Gel-X Extension Refill', price: 52, description: 'Maintenance fill and reshape for existing Gel-X extensions.' },
+      { id: 'enh-acrylic-full', name: 'Full Set Acrylic w/ Shellac', price: 55, description: 'Full set acrylic enhancements with gel shellac finish.', popular: true },
+      { id: 'enh-acrylic-fill', name: 'Acrylic Fill-In', price: 42, description: 'Maintenance fill for acrylic enhancements.' },
+      { id: 'enh-dip', name: 'Dip Powder', price: 45, description: 'Vitamin-fortified dip powder application (w/ Tips +$10, w/ Take-Off +$5).' },
+      { id: 'enh-gelx', name: 'Gel-X / Builder Gel', price: 60, description: 'Soft gel extension system or builder gel for natural weight feel.', popular: true },
+      { id: 'enh-builder-fill', name: 'Builder Gel Fill-In', price: 50, description: 'Maintenance fill for builder gel extensions.' },
+      { id: 'enh-toe-full', name: 'Toe Full-Set Acrylic', price: 65, description: 'Full set acrylic enhancements for toes.' },
     ]
   },
   {
     id: 'facials',
-    name: 'Luxury Facials',
+    name: 'Facials & Skin Therapies',
     items: [
-      { id: 'facial-glow', name: 'Signature Glow & Hydrate Facial', price: 95, description: 'Deep cleansing, gentle exfoliation, customized serum infusion, and relaxing facial massage.', popular: true },
-      { id: 'facial-acne', name: 'Clear & Clarifying Acne Facial', price: 110, description: 'Targeted pore extraction, antibacterial high frequency treatment, and soothing botanical mask.' },
-      { id: 'facial-aging', name: 'Ageless Firming Peptide Facial', price: 130, description: 'Micro-current toning, peptide firming mask, and LED red light therapy for youth renewal.' },
-      { id: 'facial-express', name: 'Express Lunchtime Refresh Facial', price: 65, description: '30-minute quick skin refresh including double cleanse, gentle peel, and hydration shield.' },
+      { id: 'fac-express', name: 'Express Refresh (30m)', price: 55, description: 'Cleanse + instantly refreshed skin.' },
+      { id: 'fac-essential', name: 'Essential Deep Clean (50m)', price: 85, description: 'Deep pore cleanse + visibly clearer skin.' },
+      { id: 'fac-oxygen', name: 'Bubble Oxygen Clean (60m)', price: 105, description: 'Oxygen cleanse + fresh radiant glow.' },
+      { id: 'fac-adv-deep', name: 'Advanced Deep Clean (75m)', price: 125, description: 'Purify pores + clearer, calmer skin.', popular: true },
+      { id: 'fac-pore-detox', name: 'Pore Detox Infusion (75m)', price: 135, description: 'Detox pores + loosen build up, remove impurities.' },
+      { id: 'fac-gentle', name: 'Gentle Renewal (60m)', price: 115, description: '(Soft Hydration) Deeply hydrates to soften skin, smooth fine lines.' },
+      { id: 'fac-nanoglow', name: 'NanoGlow Infusion (75m)', price: 145, description: '(Skin Renewal & Revitalization) Infuses targeted nutrients to boost hydration.', popular: true },
+      { id: 'fac-silk-lift', name: 'Silk Lift Therapy (90m)', price: 175, description: '(Firm & Lift) Firms, lifts, and improves elasticity.', popular: true },
+      { id: 'fac-luminous', name: 'Luminous Glass Therapy (90m)', price: 175, description: '(Advanced Brightening & Glass Skin) Purifies, brightens, and smooths.' },
+      { id: 'fac-aqua-luxe', name: 'Aqua Luxe Therapy (90m)', price: 185, description: '(Ultimate Hydration) Intense hydration to restore softness and radiance.' },
+    ]
+  },
+  {
+    id: 'acne',
+    name: 'Acne Treatment',
+    items: [
+      { id: 'acne-relief', name: 'Acne Relief (75m)', price: 125, description: 'Deep cleanse + reduced breakouts.' },
+      { id: 'acne-calm', name: 'Calm Acne Therapy (75m)', price: 145, description: 'Soothe inflammation + stronger skin barrier.', popular: true },
+      { id: 'acne-hydra', name: 'Acne Detox Hydra (90m)', price: 165, description: 'Deep detox + faster skin recovery.' },
+    ]
+  },
+  {
+    id: 'waxing',
+    name: 'Waxing Services',
+    items: [
+      { id: 'wax-eyebrow', name: 'Eyebrows Waxing', price: 15, description: 'Precision brow waxing and custom arch shaping.' },
+      { id: 'wax-lip', name: 'Lip Waxing', price: 10, description: 'Gentle hair removal for upper lip.' },
+      { id: 'wax-chin', name: 'Chin Waxing', price: 10, description: 'Gentle hair removal for chin area.' },
+      { id: 'wax-sideburns', name: 'Sideburns Waxing', price: 20, description: 'Smooth hair removal for sideburns.' },
+      { id: 'wax-fullface', name: 'Full Face Waxing', price: 45, description: 'Complete facial waxing (brows, lip, chin, sideburns).' },
+      { id: 'wax-underarms', name: 'Underarms Waxing', price: 45, description: 'Gentle underarm hair removal.' },
+      { id: 'wax-fulllegs', name: 'Full Legs Waxing', price: 50, description: 'Full leg hair removal from thighs to ankles.' },
+      { id: 'wax-halfleg', name: 'Half Leg Waxing', price: 30, description: 'Hair removal for upper or lower legs.' },
     ]
   },
   {
     id: 'add-ons',
-    name: 'Waxing & Add-ons',
+    name: 'Add-on Services',
     items: [
-      { id: 'wax-eyebrow', name: 'Eyebrow Shaping & Waxing', price: 18, description: 'Precision waxing and custom arch shaping for structured brows.' },
-      { id: 'wax-lip', name: 'Upper Lip Waxing', price: 12, description: 'Gentle hair removal for smooth upper lip skin.' },
-      { id: 'addon-paraffin', name: 'Warm Paraffin Wax Treatment', price: 15, description: 'Deep moisture lock treatment for dry hands or feet.' },
-      { id: 'addon-led', name: 'LED Light Therapy Add-on', price: 30, description: 'Targeted light therapy to stimulate collagen or calm active inflammation.' },
+      { id: 'addon-french', name: 'French Design', price: 10, description: 'Classic white or custom French tip polish.' },
+      { id: 'addon-cateye', name: 'Cat-Eye Effect', price: 10, description: 'Magnetic cat-eye shimmer effect.' },
+      { id: 'addon-chrome', name: 'Chrome Finish', price: 10, description: 'High-gloss mirror chrome finish.' },
+      { id: 'addon-ombre', name: 'Ombré Design', price: 15, description: 'Seamless gradient color transition.' },
+      { id: 'addon-dermaplaning', name: 'Dermaplaning (Skin)', price: 40, description: 'Exfoliates dead skin cells and peach fuzz for ultra-smooth skin.' },
+      { id: 'addon-led', name: 'LED Light Therapy (Skin)', price: 20, description: 'Targeted light therapy to stimulate collagen or calm inflammation.' },
     ]
   }
 ];
