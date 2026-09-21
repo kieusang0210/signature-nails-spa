@@ -21,13 +21,12 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenBooking }) => 
           
           {/* Brand Identity */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#AEB9A5] flex items-center justify-center text-[#243126] font-serif text-xl font-bold">
-                S
-              </div>
-              <span className="font-serif text-2xl font-semibold tracking-wide text-white">
-                Signature
-              </span>
+            <div className="flex items-center">
+              <img 
+                src="/logo_beige.png" 
+                alt="Signature Nails & Spa Logo" 
+                className="h-16 sm:h-20 w-auto object-contain" 
+              />
             </div>
             <p className="text-xs text-[#FCFAF5]/75 leading-relaxed font-sans">
               Approachable professional skincare &amp; polished nail artistry in a trusted local beauty destination in Comstock Park, Michigan.

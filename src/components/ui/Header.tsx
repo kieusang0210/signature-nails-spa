@@ -17,27 +17,34 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onNavigate, onOpenBo
     { id: 'contact', label: 'Contact' },
   ];
 
+  const handleNavClick = (id: string) => {
+    if (id === 'contact') {
+      const footerElement = document.querySelector('footer');
+      if (footerElement) {
+        footerElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        onNavigate('contact');
+      }
+    } else {
+      onNavigate(id);
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-[#F7F3EA]/90 backdrop-blur-md border-b border-[#E8DFD1] transition-all">
       {/* Main Navigation Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 sm:h-18">
           {/* Logo */}
           <div 
-            className="flex items-center gap-3 cursor-pointer group"
+            className="flex items-center cursor-pointer group py-1"
             onClick={() => onNavigate('home')}
           >
-            <div className="w-10 h-10 rounded-full bg-[#243126] flex items-center justify-center text-[#F7F3EA] font-serif text-xl font-bold shadow-md group-hover:bg-[#3E4A2A] transition-colors">
-              S
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif text-xl sm:text-2xl font-bold tracking-wide text-[#243126]">
-                Signature
-              </span>
-              <span className="text-[10px] tracking-[0.25em] uppercase font-sans text-[#7E8B72] font-semibold">
-                Nails &amp; Skincare
-              </span>
-            </div>
+            <img 
+              src="/logo.png" 
+              alt="Signature Nails & Spa Logo" 
+              className="h-11 sm:h-13 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-sm" 
+            />
           </div>
 
           {/* Desktop Navigation Links */}
@@ -45,7 +52,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onNavigate, onOpenBo
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => onNavigate(item.id)}
+                onClick={() => handleNavClick(item.id)}
                 className={`text-xs font-semibold uppercase tracking-[0.15em] transition-all relative py-2 ${
                   currentTab === item.id 
                     ? 'text-[#243126] font-bold' 
@@ -99,7 +106,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTab, onNavigate, onOpenBo
             <button
               key={item.id}
               onClick={() => {
-                onNavigate(item.id);
+                handleNavClick(item.id);
                 setMobileMenuOpen(false);
               }}
               className={`block w-full text-left py-2.5 px-3 rounded-lg text-xs font-semibold uppercase tracking-wider transition-colors ${
